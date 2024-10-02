@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-#include "heap.h"
+ 
+#include "some_heap.h"
 
 /*
 Assignment 5: integer minheap
 */
-
+   
 unsigned long long rand_between(unsigned long long min,
                                 unsigned long long max) {
     unsigned long long range = max - min;
     return min + (rand() % range);
 }
-
+   
 void test_heap(void) {
     heap_t *heap = heap_create(200);
     for (heap_key_t ix = 0; ix < 20; ix++) {
@@ -32,4 +32,4 @@ int main(int argc, char *argv[]) {
     srand(time(NULL));
 
     test_heap();
-}
+} 
